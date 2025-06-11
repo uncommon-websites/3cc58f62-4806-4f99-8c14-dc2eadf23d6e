@@ -7,16 +7,49 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import CustomerCardHero from "$lib/components/layout/hero-sections/CustomerCardHero.svelte";
 </script>
 
-<Hero
-	title="Elevate your business with thoughtful design"
-	subtitle="Solutions that enhance user experience, and improve visual communication."
-	imageSrc="/sample.png"
-	generating
+<CustomerCardHero
+  centered={true}
+  title="Smarter dispatching. Higher revenue."
+  subtitle="Probook helps HVAC, plumbing, and electrical teams send the right tech to every job—faster, easier, and with better results."
+  customers={[
+    {
+      name: "Tracy Lee",
+      position: "Dispatch Manager, Air Comfort Solutions",
+      imageSrc: "/generated/customer1.jpg",
+      quote: "Probook takes the guesswork out of dispatching. My team is faster, less stressed, and flipping more calls than ever."
+    },
+    {
+      name: "Jordan Brooks",
+      position: "Operations Lead, Premier Plumbing",
+      imageSrc: "/generated/customer2.jpg",
+      quote: "Our sales jumped the first month after switching. The AI really knows which tech is best for each job."
+    },
+    {
+      name: "Michelle Carter",
+      position: "Electrical Dispatcher, SparkRight Electric",
+      imageSrc: "/generated/customer3.jpg",
+      quote: "The Probook team set us up in two days and was there for every question. Dispatching just feels simple now."
+    },
+    {
+      name: "Eric Mendoza",
+      position: "General Manager, FlowMaster Sewer",
+      imageSrc: "/generated/customer4.jpg",
+      quote: "We run leaner than ever—one dispatcher covers 20+ trucks easily with Probook Autopilot."
+    }
+  ]}
 />
-<LogoScroller label="" generating />
+<LogoScroller
+	label="Trusted by industry leaders"
+	logoUrls={[
+		'https://logo.clearbit.com/aireserv.com',
+		'https://logo.clearbit.com/mistersparky.com',
+		'https://logo.clearbit.com/benfranklinplumbing.com',
+		'https://logo.clearbit.com/rotorooter.com'
+	]}
+/>
 
 <Summary
 	generating
